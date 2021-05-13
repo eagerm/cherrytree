@@ -121,7 +121,6 @@ std::vector<CtTextParser::token_schema> CtMDParser::_token_schemas()
     
         // Passthroughs for lists
         {" -", true, false, [](const std::string&){}, " "},
-        {"-", true, true, [](const std::string&){}},
         // Strikethrough
         {"~~", true,  true,  [this](const std::string &data) {
             doc_builder().add_strikethrough_tag(data);
